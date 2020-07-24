@@ -1,5 +1,5 @@
 const app = require('./modules/app/app');
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 9000;
 // const catRoute = './routes/catRoute';
 // const express = require('express');
 // const cors = require('cors');

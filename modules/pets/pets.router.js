@@ -5,15 +5,15 @@ const Pets = require('./pets.service');
 const People = require('../people/people.service');
 
 const router = express.Router();
-
-router.get('/', (req, res) => {
-  Pets.get().then((pet) => {
-    console.log('sup');
-  });
+//Get All
+router.get('/', json, (req, res) => {
+  Pets.get().then((pet) => res.send(pet));
 });
 
-router.delete('/', json, (req, res) => {
-  // Remove a pet from adoption.
+router.delete('/:type', json, (req, res) => {
+  console.log(req);
+  Pets.dequeue(req.params.type);
+  return Pets.get().then((pet) => res.send(pet));
 });
 
 module.exports = router;
