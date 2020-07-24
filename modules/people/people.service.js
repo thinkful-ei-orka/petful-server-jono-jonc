@@ -16,7 +16,6 @@ module.exports = {
       // const catToBeAdopted = pets.cats.show();
       // const dogToBeAdopted = pets.dogs.show();
       const result = people.all();
-      console.log(result);
       resolve(result, 200);
     });
     return sendback;
@@ -29,6 +28,6 @@ module.exports = {
 
   dequeue() {
     // Remove a person from the queue.
-    people.dequeue();
+    return people.dequeue();
   },
 };
