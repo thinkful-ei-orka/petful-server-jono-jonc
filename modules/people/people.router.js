@@ -17,7 +17,9 @@ router.post('/', json, (req, res) => {
   People.enqueue(req.body.name);
   People.get().then((person) => res.send(person));
 });
+
 router.delete('/', (req, res) => {
   People.dequeue();
 });
+
 module.exports = router;
