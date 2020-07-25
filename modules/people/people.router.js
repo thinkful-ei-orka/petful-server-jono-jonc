@@ -19,7 +19,9 @@ router.post('/', json, (req, res) => {
 });
 
 router.delete('/', (req, res) => {
-  People.dequeue();
+  console.log('delete')
+  People.dequeue()
+  res.send('deleted')
 });
 
 module.exports = router;
