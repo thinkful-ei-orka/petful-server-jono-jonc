@@ -1,4 +1,4 @@
 module.exports = {
-  CLIENT_ORIGIN: 'https://petful-client-template-cyan.vercel.app',
+  CLIENT_ORIGIN: 'https://petful2.vercel.app',
   PORT: process.env.PORT || 8080,
 };
