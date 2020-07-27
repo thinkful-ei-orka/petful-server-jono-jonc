@@ -1,3 +1,5 @@
+Jonathan Clark and Jon Oliver
+
 # Petful Server
 
 Petful Server is the server side codebase for the Petful project
