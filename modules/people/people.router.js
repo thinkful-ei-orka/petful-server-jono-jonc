@@ -13,15 +13,13 @@ router.get('/', (req, res) => {
 
 router.post('/', json, (req, res) => {
   // Add a new person to the queue.
-  console.log(req.body)
   People.enqueue(req.body.name);
   People.get().then((person) => res.send(person));
 });
 
 router.delete('/', (req, res) => {
-  console.log('delete')
-  People.dequeue()
-  res.send('deleted')
+  People.dequeue();
+  res.send('deleted');
 });
 
 module.exports = router;

@@ -11,7 +11,6 @@ router.get('/', json, (req, res) => {
 });
 
 router.delete('/:type', json, (req, res) => {
-  // console.log(req);
   Pets.dequeue(req.params.type);
   return Pets.get().then((pet) => res.send(pet));
 });
